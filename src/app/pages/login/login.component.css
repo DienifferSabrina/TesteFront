@@ -1,0 +1,61 @@
+/*
+* Card component
+*/
+.page-login .card {
+  max-width: 350px;
+  background-color: #F7F7F7;
+  padding: 20px 25px 30px;
+  margin: 0 auto 25px;
+  margin-top: 15%;
+  border-radius: 5px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+/**
+* Img user
+*/
+.page-login .profile-img-card {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    border-radius: 50%;
+}
+
+/**
+* inputs
+*/
+.form-signin input,
+.page-login .form-signin button {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.page-login .form-signin .form-control:focus {
+    border-color: #CE90E6;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px #CE90E6;
+}
+
+.page-login .btn.btn-signin {
+    background-color: #CE90E6;
+    padding: 0px;
+    font-weight: 700;
+    font-size: 14px;
+    height: 36px;
+    border-radius: 3px;
+    border: none;
+    transition: all 0.218s;
+}
+
+.btn.btn-signin:hover,
+.btn.btn-signin:active,
+.page-login .btn.btn-signin:focus {
+    background-color: transparent;
+    color: #CE90E6;
+    border: 1px solid #CE90E6;
+}
