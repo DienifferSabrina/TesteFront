@@ -1,9 +1,24 @@
-<div class="component-menu">
-  <div class="menu light-gray padding padding-32">
-    <ul class="ul">
-      <!--<a href="busca-periodo-tipo">
-        <li class="active">Período e Tipo de documento</li>
-      </a>-->
-    </ul>
+<header class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <div class="navbar-brand" href="#">NOME DO APP</div>
+    </div>
+  </div>
+</header>
+<div class="col-sm-3" style="padding-left: 0;">
+  <div class="component-menu">
+    <div class="menu">
+      <ul class="ul">
+        <a routerLink="/produtos">
+          <li routerLink="/produtos" routerLinkActive="active">Produtos</li>
+        </a>
+        <a routerLink="/fornecedores">
+          <li routerLink="/fornecedores" routerLinkActive="active">Fornecedores</li>
+        </a>
+        <a routerLink="/usuarios">
+          <li routerLink="/usuarios" routerLinkActive="active">Usuários</li>
+        </a>
+      </ul>
+    </div>
   </div>
 </div>
