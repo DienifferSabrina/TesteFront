@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule} from '@angular/router';
 import { LoginComponent } from '../pages/login/login.component';
 import { ProdutosComponent } from '../pages/produtos/produtos.component';
+import { fieldsComponent } from '../pages/produtos/fields/fields.component';
 
 const routes: Routes = [
 	{
@@ -20,6 +21,14 @@ const routes: Routes = [
   {
     path: 'produtos',
     component: ProdutosComponent
+  },
+  {
+    path: 'produtos/create',
+    component: fieldsComponent
+  },
+  {
+    path: 'produtos/edit/:id',
+    component: fieldsComponent
   }
 ]
 
