@@ -1,0 +1,44 @@
+<menu class="menu"></menu>
+<div class="row">
+  <div class="col-sm-8">
+    <div class="panel panel-default">
+      <div class="panel-heading">Novo Produto</div>
+      <div class="panel-body">
+        <form action="">
+          <div class="row">
+            <div class="col-sm-5">
+              <label for="">Nome:</label>
+              <input type="text" id="name" class="form-control" s required autofocus>
+            </div>
+            <div class="col-sm-5">
+              <label for="">Fornecedor:</label>
+              <select class="form-control">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <label for="">Quantidade em estoque:</label>
+              <input type="number" id="name" class="form-control" required autofocus>
+            </div>
+            <div class="col-sm-4">
+              <label for="">Valor:</label>
+              <div class="input-group">
+                <span class="input-group-addon">R$</span>
+                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="panel-footer">
+        <div class="btn btn-success" style="margin-right: 5px;">Salvar</div>
+        <div class="btn btn-default" routerLink="/produtos">Voltar</div>
+      </div>
+    </div>
+  </div>
+</div>

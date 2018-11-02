@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 // importação das classes para fazer as rotas
 import { Routes, RouterModule} from '@angular/router';
 import { LoginComponent } from '../pages/login/login.component';
+import { ProdutosComponent } from '../pages/produtos/produtos.component';
+import { fieldsComponent } from '../pages/produtos/fields/fields.component';
 
 const routes: Routes = [
 	{
@@ -15,7 +17,19 @@ const routes: Routes = [
 	{
     path: 'login',
     component: LoginComponent
-	}
+  },
+  {
+    path: 'produtos',
+    component: ProdutosComponent
+  },
+  {
+    path: 'produtos/create',
+    component: fieldsComponent
+  },
+  {
+    path: 'produtos/edit/:id',
+    component: fieldsComponent
+  }
 ]
 
 @NgModule({

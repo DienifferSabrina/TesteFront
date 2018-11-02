@@ -10,13 +10,16 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 /** pages */
 import { LoginComponent } from './pages/login/login.component';
 import { MenuComponent } from './components/menu/menu.component';
-
+import { ProdutosComponent } from './pages/produtos/produtos.component';
+import { fieldsComponent } from './pages/produtos/fields/fields.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    MenuComponent
+    MenuComponent,
+    ProdutosComponent,
+    fieldsComponent
   ],
   imports: [
     BrowserModule,
