@@ -12,10 +12,15 @@ import { LoginComponent } from './pages/login/login.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { ProdutosComponent } from './pages/produtos/produtos.component';
 import { fieldsComponent } from './pages/produtos/fields/fields.component';
+import { FornecedoresComponent } from './pages/fornecedores/fornecedores.component';
+import { UsuariosComponent } from './pages/usuarios/usuarios.component';
+import { FieldsSupliersComponent } from './pages/fornecedores/fields-supliers/fields-supliers.component';
+import { FieldsUsersComponent } from './pages/usuarios/fields-users/fields-users.component';
 
 /** services */
 import { ProdutosService } from './services/produtos/produtosService';
 import { FornecedoresService } from './services/fornecedores/fornecedoresService';
+import { UsuariosService } from './services/usuarios/usuariosService';
 
 @NgModule({
   declarations: [
@@ -23,7 +28,11 @@ import { FornecedoresService } from './services/fornecedores/fornecedoresService
     LoginComponent,
     MenuComponent,
     ProdutosComponent,
-    fieldsComponent
+    fieldsComponent,
+    UsuariosComponent,
+    FornecedoresComponent,
+    FieldsSupliersComponent,
+    FieldsUsersComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +46,8 @@ import { FornecedoresService } from './services/fornecedores/fornecedoresService
       useValue: 'pt-BR'
     },
     ProdutosService,
-    FornecedoresService
+    FornecedoresService,
+    UsuariosService
   ],
   bootstrap: [AppComponent],
 
