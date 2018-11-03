@@ -13,6 +13,10 @@ import { MenuComponent } from './components/menu/menu.component';
 import { ProdutosComponent } from './pages/produtos/produtos.component';
 import { fieldsComponent } from './pages/produtos/fields/fields.component';
 
+/** services */
+import { ProdutosService } from './services/produtos/produtosService';
+import { FornecedoresService } from './services/fornecedores/fornecedoresService';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +33,11 @@ import { fieldsComponent } from './pages/produtos/fields/fields.component';
 
   ],
   providers: [
-    {provide: LOCALE_ID, useValue: 'pt-BR'}
+    {provide: LOCALE_ID, 
+      useValue: 'pt-BR'
+    },
+    ProdutosService,
+    FornecedoresService
   ],
   bootstrap: [AppComponent],
 
