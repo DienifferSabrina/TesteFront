@@ -21,7 +21,6 @@ export class fieldsComponent implements OnInit {
               private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
-
     this.activatedRoute.params.subscribe(params => {
       if(params['id'] != null){
         this.open(+params["id"]);
