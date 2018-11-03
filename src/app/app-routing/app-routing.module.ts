@@ -6,6 +6,11 @@ import { Routes, RouterModule} from '@angular/router';
 import { LoginComponent } from '../pages/login/login.component';
 import { ProdutosComponent } from '../pages/produtos/produtos.component';
 import { fieldsComponent } from '../pages/produtos/fields/fields.component';
+import { FornecedoresComponent } from '../pages/fornecedores/fornecedores.component';
+import { FieldsUsersComponent } from './../pages/usuarios/fields-users/fields-users.component';
+import { UsuariosComponent } from './../pages/usuarios/usuarios.component';
+import { FieldsSuppliersComponent } from './../pages/fornecedores/fields-suppliers/fields-suppliers.component';
+
 
 const routes: Routes = [
 	{
@@ -29,6 +34,30 @@ const routes: Routes = [
   {
     path: 'produtos/edit/:id',
     component: fieldsComponent
+  },
+  {
+    path: 'fornecedores',
+    component: FornecedoresComponent
+  },
+  {
+    path: 'fornecedores/create',
+    component: FieldsSuppliersComponent
+  },
+  {
+    path: 'fornecedores/edit/:id',
+    component: FieldsSuppliersComponent
+  },
+  {
+    path: 'usuarios',
+    component: UsuariosComponent
+  },
+  {
+    path: 'usuarios/create',
+    component: FieldsUsersComponent
+  },
+  {
+    path: 'usuarios/edit/:id',
+    component: FieldsUsersComponent
   }
 ]
 

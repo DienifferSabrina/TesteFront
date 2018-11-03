@@ -26,7 +26,6 @@ export class ProdutosService{
     }
 
     public put(product: any){
-        debugger;
         return this.http.put(`${environment.UrlCore}produtos/${product.id}`, this.TratarBody(product), null).pipe(map(response => response.json()));
     }
 
@@ -36,8 +35,6 @@ export class ProdutosService{
 
     private TratarBody(product: any) {
         var entidade = (JSON.parse(JSON.stringify(product)));
-        debugger;
-        console.log(entidade);
         return entidade;
     }
 
