@@ -30,7 +30,7 @@ export class ProdutosComponent implements OnInit {
     this.router.navigate(['/produtos/edit/', item.id]);
   }
 
-  cancel(item: any){
+  delete(item: any){
     this.productsService.delete(item.id).subscribe(q => {
       swal('Sucesso', 'Registro excluído com sucesso!', 'success');
       this.searchProducts();

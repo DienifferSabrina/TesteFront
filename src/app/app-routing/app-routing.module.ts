@@ -10,6 +10,7 @@ import { FornecedoresComponent } from '../pages/fornecedores/fornecedores.compon
 import { FieldsUsersComponent } from './../pages/usuarios/fields-users/fields-users.component';
 import { UsuariosComponent } from './../pages/usuarios/usuarios.component';
 import { FieldsSuppliersComponent } from './../pages/fornecedores/fields-suppliers/fields-suppliers.component';
+import { CreateUserComponent } from './../pages/login/create-user/create-user.component';
 
 
 const routes: Routes = [
@@ -58,6 +59,10 @@ const routes: Routes = [
   {
     path: 'usuarios/edit/:id',
     component: FieldsUsersComponent
+  },
+  {
+    path: 'usuario/create',
+    component: CreateUserComponent
   }
 ]
 

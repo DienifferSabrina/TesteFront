@@ -16,11 +16,13 @@ import { FornecedoresComponent } from './pages/fornecedores/fornecedores.compone
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { FieldsSuppliersComponent } from './pages/fornecedores/fields-suppliers/fields-suppliers.component';
 import { FieldsUsersComponent } from './pages/usuarios/fields-users/fields-users.component';
+import { CreateUserComponent } from './pages/login/create-user/create-user.component';
 
 /** services */
 import { ProdutosService } from './services/produtos/produtosService';
 import { FornecedoresService } from './services/fornecedores/fornecedoresService';
 import { UsuariosService } from './services/usuarios/usuariosService';
+
 
 
 @NgModule({
@@ -33,7 +35,8 @@ import { UsuariosService } from './services/usuarios/usuariosService';
     UsuariosComponent,
     FornecedoresComponent,
     FieldsUsersComponent,
-    FieldsSuppliersComponent
+    FieldsSuppliersComponent,
+    CreateUserComponent
   ],
   imports: [
     BrowserModule,

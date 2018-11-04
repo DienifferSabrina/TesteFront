@@ -90,9 +90,7 @@ export class FieldsSuppliersComponent implements OnInit {
         return;
       }, err => {
       });
-    }
-
-    
+    }    
   }
 
 }

@@ -29,7 +29,7 @@ export class FornecedoresComponent implements OnInit {
     this.router.navigate(['/fornecedores/edit/', item.id]);
   }
 
-  cancel(item: any){
+  delete(item: any){
     this.suppliersService.delete(item.id).subscribe(q => {
       swal('Sucesso', 'Registro excluído com sucesso!', 'success');
       this.searchSuppliers();
