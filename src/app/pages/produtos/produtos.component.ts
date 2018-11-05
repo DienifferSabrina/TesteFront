@@ -1,5 +1,4 @@
-import { Router } from '@angular/router';
-import { FornecedoresService } from './../../services/fornecedores/fornecedoresService';
+import { Router, ActivatedRoute } from '@angular/router';
 import { ProdutosService } from './../../services/produtos/produtosService';
 import { Component, OnInit } from '@angular/core';
 import swal from 'sweetalert2';
@@ -12,17 +11,36 @@ import swal from 'sweetalert2';
 export class ProdutosComponent implements OnInit {
 
   products:any = [];
+  pages = [];
+  actualPage;
 
-  constructor( private productsService: ProdutosService,
-              private router : Router) { }
+  constructor(
+    private productsService: ProdutosService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute
+  ) { }
 
   ngOnInit() {
+    this.activatedRoute.params.subscribe(params => this.actualPage = params['page'] || 1);
     this.searchProducts();
   }
 
   searchProducts(){
-    this.productsService.getAll().subscribe(q => {
-      this.products = q;
+    this.productsService.getAll(this.actualPage).subscribe(q => {
+      this.products = q.data;
+      this.actualPage = q.pageActual;
+      for (let index = 1; index <= q.pages; index++) {
+        this.pages.push(index);
+      }
+    });
+  }
+
+  setPage(page) {
+    this.actualPage = page;
+    this.router.navigate(['/produtos', page]);
+    this.productsService.getAll(this.actualPage).subscribe(q => {
+      this.products = q.data;
+      this.actualPage = q.pageActual;
     });
   }
 
@@ -37,5 +55,4 @@ export class ProdutosComponent implements OnInit {
     });
   }
 
-  
 }

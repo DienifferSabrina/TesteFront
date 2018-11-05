@@ -24,7 +24,9 @@ import { FornecedoresService } from './services/fornecedores/fornecedoresService
 import { UsuariosService } from './services/usuarios/usuariosService';
 import { LoginService } from './services/login/loginService';
 
-
+import { registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt';
+registerLocaleData(localePt);
 
 @NgModule({
   declarations: [
@@ -44,10 +46,9 @@ import { LoginService } from './services/login/loginService';
     FormsModule,
     HttpModule,
     AppRoutingModule
-
   ],
   providers: [
-    {provide: LOCALE_ID, 
+    {provide: LOCALE_ID,
       useValue: 'pt-BR'
     },
     ProdutosService,

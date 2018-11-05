@@ -25,7 +25,7 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'produtos',
+    path: 'produtos/:page',
     component: ProdutosComponent
   },
   {

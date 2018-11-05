@@ -7,11 +7,11 @@ import {map} from 'rxjs/operators';
 
 @Injectable()
 export class ProdutosService{
-    
+
     constructor(private http: Http){ }
 
-    public getAll(){
-        return this.http.get(`${environment.UrlCore}produtos/`, null).pipe(map(response => response.json()));
+    public getAll(page = 1){
+        return this.http.get(`${environment.UrlCore}produtos/all/${page}`, null).pipe(map(response => response.json()));
     }
 
     public getById(id: number){
