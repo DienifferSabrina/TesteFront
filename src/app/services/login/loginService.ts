@@ -1,11 +1,7 @@
 import { LoginModel } from './../../model/loginModel';
-/**
- import { environment } from './../../../environments/environment.prod';
- */
-
 import { Injectable } from "@angular/core";
 import { Http } from "@angular/http";
-import { environment } from "src/environments/environment";
+import { environment } from './../../../environments/environment';
 import {map} from 'rxjs/operators';
 
 
@@ -17,7 +13,12 @@ export class LoginService{
     constructor(private http: Http){ }
 
     public logar(loginModel: LoginModel){
-        return this.http.get(`${environment.UrlCore}login/${loginModel.login}/${loginModel.senha}`, null).pipe(map(response => response.json()));
+        return this.http.post(`${environment.UrlCore}login/`,this.TratarBody(loginModel), null).pipe(map(response => response.json()));
+    }
+
+    private TratarBody(loginModel: LoginModel) {
+        var entidade = (JSON.parse(JSON.stringify(loginModel)));
+        return entidade;
     }
 
    
