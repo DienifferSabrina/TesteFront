@@ -21,7 +21,6 @@ export class UsuariosComponent implements OnInit {
   searchUsers(){
     this.usersService.getAll().subscribe(q => {
       this.users = q;
-      console.log(this.users);
     });
   }
 

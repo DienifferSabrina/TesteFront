@@ -5,10 +5,10 @@
       <p id="profile-name" class="profile-name-card"></p>
       <form class="form-signin">
         <span id="reauth-email" class="reauth-email"></span>
-        <input type="email" id="username" class="form-control" placeholder="Nome de Usuário" required autofocus>
-        <input type="password" id="password" class="form-control" placeholder="Senha" required>
-        <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" routerLink="/produtos">Entrar</button>
-        <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" routerLink="/usuario/create">Cadastrar</button>
+        <input type="text" [(ngModel)]="user.login" name="login" class="form-control" placeholder="Nome de Usuário" required autofocus>
+        <input type="text" [(ngModel)]="user.senha" name="senha"class="form-control" placeholder="Senha" required>
+    <button class="btn btn-lg btn-primary btn-block btn-signin" (click)="submitLogin(user)">Entrar</button>
+        <button class="btn btn-lg btn-primary btn-block btn-signin" routerLink="/usuario/create">Cadastrar</button>
       </form>
     </div>
   </div>

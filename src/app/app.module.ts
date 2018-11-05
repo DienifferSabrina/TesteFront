@@ -22,6 +22,7 @@ import { CreateUserComponent } from './pages/login/create-user/create-user.compo
 import { ProdutosService } from './services/produtos/produtosService';
 import { FornecedoresService } from './services/fornecedores/fornecedoresService';
 import { UsuariosService } from './services/usuarios/usuariosService';
+import { LoginService } from './services/login/loginService';
 
 
 
@@ -51,7 +52,8 @@ import { UsuariosService } from './services/usuarios/usuariosService';
     },
     ProdutosService,
     FornecedoresService,
-    UsuariosService
+    UsuariosService,
+    LoginService
   ],
   bootstrap: [AppComponent],
 
