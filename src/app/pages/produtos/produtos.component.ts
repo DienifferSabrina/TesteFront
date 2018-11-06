@@ -14,11 +14,10 @@ export class ProdutosComponent implements OnInit {
   pages = [];
   actualPage;
 
-  constructor(
-    private productsService: ProdutosService,
-    private router: Router,
-    private activatedRoute: ActivatedRoute
-  ) { }
+  constructor(private productsService: ProdutosService,
+              private router: Router,
+              private activatedRoute: ActivatedRoute
+            ) { }
 
   ngOnInit() {
     this.activatedRoute.params.subscribe(params => this.actualPage = params['page'] || 1);
@@ -45,13 +44,18 @@ export class ProdutosComponent implements OnInit {
   }
 
   open(item: any){
-    this.router.navigate(['/produtos/edit/', item.id]);
+    this.router.navigate(['/produto/edit/', item.id]);
   }
 
   delete(item: any){
     this.productsService.delete(item.id).subscribe(q => {
       swal('Sucesso', 'Registro excluído com sucesso!', 'success');
-      this.searchProducts();
+      this.actualPage = 1;
+      this.router.navigate(['/produtos/1']);
+      this.productsService.getAll(this.actualPage).subscribe(q => {
+        this.products = q.data;
+        this.actualPage = q.pageActual;
+      });
     });
   }
 

@@ -3,3 +3,11 @@
     margin-top: 0px;
   }
   
+  a.disabled {
+    pointer-events: none;
+}
+
+li.active a{
+  background-color: #CE90E6;
+  border-color: #CE90E6;
+}

@@ -79,14 +79,14 @@ export class FieldsSuppliersComponent implements OnInit {
     if(this.supplier.id){
       this.suppliersService.put(this.supplier).subscribe(q => {
         swal('Criação', `Fornecedor alterado com sucesso.`, 'success');
-        this.router.navigate(['/fornecedores']);
+        this.router.navigate(['/fornecedores/1']);
         return;
       }, err => {
       });
     } else {
       this.suppliersService.post(this.supplier).subscribe(q => {
         swal('Criação', `Fornecedor criado com sucesso.`, 'success');
-        this.router.navigate(['/fornecedores']);
+        this.router.navigate(['/fornecedores/1']);
         return;
       }, err => {
       });

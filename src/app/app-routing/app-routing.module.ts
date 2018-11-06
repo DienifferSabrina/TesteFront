@@ -29,39 +29,39 @@ const routes: Routes = [
     component: ProdutosComponent
   },
   {
-    path: 'produtos/create',
+    path: 'produto/create',
     component: fieldsComponent
   },
   {
-    path: 'produtos/edit/:id',
+    path: 'produto/edit/:id',
     component: fieldsComponent
   },
   {
-    path: 'fornecedores',
+    path: 'fornecedores/:page',
     component: FornecedoresComponent
   },
   {
-    path: 'fornecedores/create',
+    path: 'fornecedor/create',
     component: FieldsSuppliersComponent
   },
   {
-    path: 'fornecedores/edit/:id',
+    path: 'fornecedor/edit/:id',
     component: FieldsSuppliersComponent
   },
   {
-    path: 'usuarios',
+    path: 'usuarios/:page',
     component: UsuariosComponent
   },
   {
-    path: 'usuarios/create',
-    component: FieldsUsersComponent
-  },
-  {
-    path: 'usuarios/edit/:id',
-    component: FieldsUsersComponent
-  },
-  {
     path: 'usuario/create',
+    component: FieldsUsersComponent
+  },
+  {
+    path: 'usuario/edit/:id',
+    component: FieldsUsersComponent
+  },
+  {
+    path: 'usuario/create/login',
     component: CreateUserComponent
   }
 ]

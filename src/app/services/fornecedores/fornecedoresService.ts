@@ -9,8 +9,12 @@ export class FornecedoresService{
     
     constructor(private http: Http){ }
 
-    public getAll(){
+    public getSuppliers(){
         return this.http.get(`${environment.UrlCore}fornecedor/`, null).pipe(map(response => response.json()));
+    }
+
+    public getAll(page = 1){
+        return this.http.get(`${environment.UrlCore}fornecedor/all/${page}`, null).pipe(map(response => response.json()));
     }
 
     public getById(id: number){

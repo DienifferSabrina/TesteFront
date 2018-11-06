@@ -10,8 +10,8 @@ export class UsuariosService{
     
     constructor(private http: Http){ }
 
-    public getAll(){
-        return this.http.get(`${environment.UrlCore}usuario/`, null).pipe(map(response => response.json()));
+    public getAll(page = 1){
+        return this.http.get(`${environment.UrlCore}usuario/all/${page}`, null).pipe(map(response => response.json()));
     }
 
     public getById(id: number){

@@ -15,19 +15,19 @@ export class ProdutosService{
     }
 
     public getById(id: number){
-        return this.http.get(`${environment.UrlCore}produtos/${id}`, null).pipe(map(response => response.json()));
+        return this.http.get(`${environment.UrlCore}produto/${id}`, null).pipe(map(response => response.json()));
     }
 
     public post(product: any){
-        return this.http.post(`${environment.UrlCore}produtos/`, this.TratarBody(product), null).pipe(map(response => response.json()));
+        return this.http.post(`${environment.UrlCore}produto/`, this.TratarBody(product), null).pipe(map(response => response.json()));
     }
 
     public put(product: any){
-        return this.http.put(`${environment.UrlCore}produtos/${product.id}`, this.TratarBody(product), null).pipe(map(response => response.json()));
+        return this.http.put(`${environment.UrlCore}produto/${product.id}`, this.TratarBody(product), null).pipe(map(response => response.json()));
     }
 
     public delete(id: any){
-        return this.http.delete(`${environment.UrlCore}produtos/${id}`, null).pipe(map(response => response.json()));
+        return this.http.delete(`${environment.UrlCore}produto/${id}`, null).pipe(map(response => response.json()));
     }
 
     private TratarBody(product: any) {

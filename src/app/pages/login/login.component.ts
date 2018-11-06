@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
       this.userLogged = q;
       if(this.userLogged.length > 0){
         if(this.userLogged[0].senha == user.senha){
-          this.router.navigate(['/produtos']);
+          this.router.navigate(['/produtos/1']);
         } else {
           swal('Validação', 'Senha incorreta.', 'warning');
           return false;

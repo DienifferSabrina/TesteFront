@@ -39,7 +39,7 @@ export class fieldsComponent implements OnInit {
   }
 
   searchSuppliers(){
-    this.suppliersService.getAll().subscribe(q => {
+    this.suppliersService.getSuppliers().subscribe(q => {
       this.suppliers = q;
     });
   }
@@ -74,14 +74,14 @@ export class fieldsComponent implements OnInit {
     if(this.product.id) {
       this.productService.put(this.product).subscribe(q => {
         swal('Criação', `Produto alterado com sucesso.`, 'success');
-        this.router.navigate(['/produtos']);
+        this.router.navigate(['/produtos/1']);
         return;
       }, err => {
       });
     } else {
       this.productService.post(this.product).subscribe(q => {
         swal('Criação', `Produto criado com sucesso.`, 'success');
-        this.router.navigate(['/produtos']);
+        this.router.navigate(['/produtos/1']);
         return;
       }, err => {
       });

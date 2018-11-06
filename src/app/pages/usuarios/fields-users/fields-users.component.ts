@@ -54,14 +54,14 @@ export class FieldsUsersComponent implements OnInit {
     if(this.user.id){
       this.usersService.put(this.user).subscribe(q => {
         swal('Criação', `Usuário alterado com sucesso.`, 'success');
-        this.router.navigate(['/usuarios']);
+        this.router.navigate(['/usuarios/1']);
         return;
       }, err => {
       });
     } else {
       this.usersService.post(this.user).subscribe(q => {
         swal('Criação', `Usuário criado com sucesso.`, 'success');
-        this.router.navigate(['/usuarios']);
+        this.router.navigate(['/usuarios/1']);
         return;
       }, err => {
       });
